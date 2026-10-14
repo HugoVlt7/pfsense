@@ -11,6 +11,7 @@ Notre architecture reste la même que dans le TP précédent.
 | WAN  | 192.168.20.0/24 | 192.168.20.101 (DHCP) |
 | LAN  | 192.168.10.0/24 | 192.168.10.1          |
 | DMZ  | 192.168.30.0/24 | 192.168.30.1          |
+
 ![Capture 01](images/01-tp-addon.png)
 ## Étape 1 : choix de la solution de monitoring
 
@@ -74,13 +75,6 @@ Pour la configuration, nous le ferons écouter sur l'interface **LAN**, puisque 
 - **Compatibilité** : nous utilisons pfSense CE 2.9.0, une version très récente. Nous vérifierons que le package ntopng apparaît bien dans la liste des packages disponibles avant de continuer.
 - **Sauvegarde** : avant l'installation, nous faisons un snapshot de la VM dans Proxmox et nous exportons la configuration (Diagnostics > Backup & Restore), pour pouvoir revenir en arrière en cas de problème.
 
-
-
-
-ntopng :
-![Capture 02](images/02-tp-addon.png)
-
-
 ## Étape 2 : Mise en place de ntopng
 
 ### Préparation
@@ -93,6 +87,7 @@ Puis nous exportons la configuration de pfSense dans Diagnostics > Backup & Rest
 
 ![Capture 03](images/03-tp-addon.png)
 ![Capture 04](images/04-tp-addon.png)
+
 💡 Le snapshot est pris sans la RAM, ce qui suffit pour revenir à l'état de la VM avant l'installation.
 ### Installation du package
 
@@ -338,6 +333,7 @@ Nous entrons les identifiants du compte local du serveur. La session s'ouvre sur
 Nous vérifions aussi dans pfSense que le trafic passe bien par la règle : dans **Firewall > Rules > WAN**, le compteur d'états de la règle RDP augmente après notre connexion.
 
 ![Capture 27](images/27-tp-addon.png)
+
 ### Conclusion de la situation 2
 
 Nous avons mis en place un serveur Windows dans la DMZ, accessible en bureau à distance depuis l'extérieur. Le flux arrive sur l'adresse WAN de pfSense sur le port 54590, puis il est redirigé vers le serveur sur le port RDP par défaut 3389.
