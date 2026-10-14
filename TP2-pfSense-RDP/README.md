@@ -253,8 +253,6 @@ Un ping vers la passerelle 192.168.30.1 ne fonctionne pas pour l'instant. C'est 
 
 Sur le serveur, dans le Gestionnaire de serveur > Serveur local, nous cliquons sur Bureau à distance (affiché "Désactivé") et nous autorisons les connexions à distance à cet ordinateur.
 
-Nous laissons cochée l'option d'authentification au niveau du réseau (NLA), qui oblige l'utilisateur à s'authentifier avant l'ouverture de la session.
-
 ![Capture 19](images/19-tp-addon.png)
 
 Nous vérifions ensuite le pare-feu Windows. La règle "Bureau à distance" doit être activée, y compris pour le profil Public, car Windows peut classer le réseau de la DMZ comme public.
