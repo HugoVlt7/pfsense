@@ -46,7 +46,6 @@ Mission : installer pfSense avec 3 interfaces (WAN, LAN, DMZ), placer un serveur
 - Partie 2 - Serveur web dans la DMZ
 - Partie 3 - NAT et règles de pare-feu
 - Partie 4 - Tests
-- Dépannage et sauvegarde
 - Conclusion
 
 ## Partie 1 - Installation de pfSense
@@ -90,7 +89,9 @@ Une fois l'installation terminée, nous retirons l'ISO du lecteur (Hardware > CD
 Le menu console nous affiche le WAN en 192.168.20.101/24 (DHCP) et le LAN en 192.168.10.1/24.
 
 ![Capture 04](images/04-tp-dmz.png)
-![Capture 05](images/05-tp-dmz.png)![Capture 06](images/06-tp-dmz.png)
+![Capture 05](images/05-tp-dmz.png)
+![Capture 06](images/06-tp-dmz.png)
+
 ### Ajout de la DMZ
 
 L'installeur ne propose que le WAN et le LAN, nous assignons donc vtnet2 depuis la console avec l'option 1 (Assign Interfaces). Nous mettons vtnet0 en WAN, vtnet1 en LAN et vtnet2 en OPT1.
