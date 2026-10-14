@@ -10,10 +10,6 @@
   <img src="https://img.shields.io/badge/BTS-SIO%20SISR-green" alt="BTS SIO SISR">
 </p>
 
-<p align="center">
-  <img src="TP1-pfSense-DMZ/images/schema_reseau_pfsense_dmz.png" alt="Schéma réseau" width="700">
-</p>
-
 ## Sommaire
 
 | Partie | Contenu | Compte rendu |
